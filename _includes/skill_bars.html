@@ -1,0 +1,26 @@
+
+<div class="levels clearfix">
+	<label>Beginner</label>
+	<label>Familiar</label>
+	<label>Proficient</label>
+	<label>Expert</label>
+	<label>Master</label>
+</div>	
+
+<div class="graph">
+	{% if include.level1 %}
+	<div class="bar level-{{ include.level1 }}"><label>{{ include.skill1 }}</label></div>
+	{% endif %}
+	{% if include.level2 %}
+	<div class="bar level-{{ include.level2 }}"><label>{{ include.skill2 }}</label></div>
+	{% endif %}
+	{% if include.level3 %}
+	<div class="bar level-{{ include.level3 }}"><label>{{ include.skill3 }}</label></div>
+	{% endif %}
+	{% if include.level4 %}
+	<div class="bar level-{{ include.level4 }}"><label>{{ include.skill4 }}</label></div>
+	{% endif %}
+	{% if include.level5 %}
+	<div class="bar level-{{ include.level5 }}"><label>{{ include.skill5 }}</label></div>
+	{% endif %}
+</div>

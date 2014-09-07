@@ -1,0 +1,15 @@
+---
+safe: false # disable custom plugins
+permalink: none
+exclude:
+- build.sh
+- Gemfile
+- Gemfile.lock
+- Rakefile
+- debian
+- VERSION
+title: "Hector Blanco's website"
+description: "Hector Blanco's website"
+markdown: redcarpet
+pygments: true
+domain: hectorblanco.net

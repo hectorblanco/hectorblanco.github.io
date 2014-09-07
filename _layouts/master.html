@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }}</title>
+
+    {% if page.description %}
+    <meta name="description" content="{{page.description}}" />
+    {% else %}
+    <meta name="description" content="{{site.description}}" />
+    {% endif %}
+
+    <meta charset="utf-8">
+    <link rel="canonical" href="/"/>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    {% if page.url == "/404.html" %}
+    <meta http-equiv="refresh" content="0; url=/">
+    {% endif %}
+
+    <meta property="og:image" content="http://{{ site.domain }}/assets/img/favicon_144x144px.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css">
+    <link href="/assets/css/fontello.css" rel="stylesheet">
+    <link href="/assets/css/animation.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <!-- Standard iPhone -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon_57x57px.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/img/favicon_57x57px.png" />
+    <!-- Retina iPhone -->
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon_114x114px.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/assets/img/favicon_114x114px.png" />
+    <!-- Standard iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon_72x72px.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/favicon_72x72px.png" />
+    <!-- Retina iPad -->
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon_144x144px.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/favicon_144x144px.png" />
+
+    <!--[if IE]>
+      <meta name="isie" content="true" />
+    <![endif]-->
+
+  </head>
+  <body class="preload" data-tag="{{ page.tags }}">
+
+    {{ content }}
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.scrollmagic.min.js"></script>
+    <script type="text/javascript" src="/assets/js/isotope.pkgd.min.js"></script>    
+    <script type="text/javascript" src="/assets/js/imagelightbox.min.js"></script>
+    <script type="text/javascript" src="/assets/js/m.js"></script>
+  </body>
+</html>
