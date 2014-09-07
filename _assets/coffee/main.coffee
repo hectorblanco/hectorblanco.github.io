@@ -53,19 +53,37 @@ $ ->
 
   overlayOn = -> 
     $("#lightbox-overlay").fadeIn()
-    $("body").addClass("noscroll");
+    $("body").addClass("noscroll")
   overlayOff = ->
-    $("body").removeClass("noscroll");
+    $("body").removeClass("noscroll")
     $("#lightbox-overlay").fadeOut("slow")
+
+  captionOn = ->
+    selectedImage = $("#imagelightbox").attr("src")
+    image = $("a[href='#{selectedImage}'] img")
+    title = image.attr("alt")
+    body = image.data("caption")
+    if title.length > 0 or body.length > 0
+      caption = $("#lightbox-caption")
+      caption.find(".title").text(title)
+      caption.find(".body").text(body)
+      caption.fadeIn()
+  captionOff = ->
+    $("#lightbox-caption").fadeOut()
 
   # Show large picture on hovering images  
   $("#gallery .gallery-item a").imageLightbox
     onStart:      -> overlayOn()
     onEnd:        ->
+      captionOff()
       overlayOff()
       activityIndicatorOff()
-    onLoadStart:  -> activityIndicatorOn()
-    onLoadEnd:    -> activityIndicatorOff()
+    onLoadStart:  ->
+      captionOff()
+      activityIndicatorOn()
+    onLoadEnd:    ->
+      captionOn()
+      activityIndicatorOff()
 
   # NAV COLLAPSE
 

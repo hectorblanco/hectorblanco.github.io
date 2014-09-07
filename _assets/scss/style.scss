@@ -114,6 +114,12 @@ $color-skill-label: #d5d5d5;
     background: linear-gradient(to right, $gradients);
 }
 
+@mixin animation-colorize() {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 // GLOBAL RULES
 
 * {
@@ -332,34 +338,36 @@ nav.navbar {
 
 // ICONS STYLE
 
-.icon-circle {
+.icon-block {
     @include transition(all ease 0.6s);
     display: block; width: 60px; height: 60px;
-    border: 2px solid $color-text-dark; border-radius: 50%;                 
     color: $color-text-light; text-align: center;
-    i { line-height: 60px; font-size: 40px; display: inline; }
+    i { line-height: 54px; font-size: 40px; display: inline; }
+    &.icon-circle {
+        border: 2px solid $color-text-dark; border-radius: 50%;                 
+    }
 }
 
 #imagelightbox {
-    position: fixed; z-index: 9999; 
+    position: fixed; z-index: 10000; 
     -ms-touch-action: none; touch-action: none;
     background-color: $color-gallery-frame; border: 1px solid $color-gallery-frame;
-    .caption {
-        padding: 10px;
-        background-color: $color-gallery-caption;
-        font-size: 0.9em; color: $color-text-light;
-        .title {
-            display: block;
-            @include font-thick(); color: $color-highlight;
-        }
-    }
+}
+
+#lightbox-caption
+{
+    padding: 0.625em; z-index: 10001;
+    position: fixed; left: 0; right: 0; bottom: 0;
+    text-align: center; font-size: 0.9em; color: $color-text-light;
+    background-color: $color-gallery-caption;
+    .title { @include font-thick(); }
 }
 
 #lightbox-loading {
     position: fixed; top: 45%; left: 50%;
-    z-index: 10003; display: none;
-    background-color: $color-background-dark;
-    opacity: 0.7;
+    z-index: 9999; //display: none;
+    opacity: 0.9; color: $color-highlight;
+    i { font-size: 70px; }
 }
 
 #lightbox-overlay {
@@ -367,6 +375,20 @@ nav.navbar {
     z-index: 9998; display: none;
     background-color: rgba( 44, 44, 44, .6 );
 }
+
+.animate-colorize {
+  -moz-animation: colorize 1s infinite linear;
+  -o-animation: colorize 1s infinite linear;
+  -webkit-animation: colorize 1s infinite linear;
+  animation: colorize 1s infinite linear;
+  display: inline-block;
+}
+
+@-moz-keyframes colorize { @include animation-colorize(); }
+@-webkit-keyframes colorize { @include animation-colorize(); }
+@-o-keyframes colorize { @include animation-colorize(); }
+@-ms-keyframes colorize { @include animation-colorize(); }
+@keyframes colorize { @include animation-colorize(); }
 
 body.noscroll {
     overflow: hidden;
@@ -612,7 +634,7 @@ section#contact {
         @include transition(all ease 0.6s);
         .icon-circle {
             width: 40px; height: 40px; display: inline-block; margin-right: 0.5em;
-            i { line-height: 40px; font-size: 1em; }
+            i { line-height: 35px; font-size: 1em; }
         }
         &:hover {  
             .icon-circle { background-color: $color-highlight; color: #FFFFFF; border-color: #FFFFFF; }
