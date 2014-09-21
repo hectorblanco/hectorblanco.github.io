@@ -354,8 +354,7 @@ nav.navbar {
     background-color: $color-gallery-frame; border: 1px solid $color-gallery-frame;
 }
 
-#lightbox-caption
-{
+#lightbox-caption {
     padding: 0.625em;
     z-index: 10001; display: none;
     position: fixed; left: 0; right: 0; bottom: 0;
@@ -541,7 +540,10 @@ section#about {
         padding: 10px 0;
         strong { @include font-medium(); }
     }
-	img { float: left; margin: 0 10% 5% 0; }
+	img {
+        float: left; margin: 0 10% 5% 0;
+        @media (max-width: 480px) { float: none; }
+    }
 }
 
 section#gallery {
