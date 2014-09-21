@@ -495,11 +495,11 @@ header#home {
                 z-index: 100;
                 h1 a {
                     z-index: 500;
-                    @include font-thinest(); color: $color-text-dark; font-size: 1.2em;
-                    .name { @include font-thickest(); color: $color-highlight; }
+                    text-transform: uppercase;
+                    @include font-thickest(); color: $color-text-dark; font-size: 1.2em;
                 }
-                p {
-                    .welcome { @include font-thick(); }
+                h2 {
+                    text-transform: uppercase;
                     @include font-thinest(); font-size: 2em;
                 }
             }
