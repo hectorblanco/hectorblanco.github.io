@@ -548,23 +548,8 @@ header#home {
             background-position: center top;
             &.fluid { background-attachment: scroll; }
     	}
-        .layer1 {
-            background-image: url('/assets/img/header-layer-1.jpg');
-            background-color: #B8B8B8; 
-            background-repeat: repeat-x;
-    	}
-        .layer2 {
-            background-image: url('/assets/img/header-layer-2.png'); 
-            position: absolute; top: 0; 
-        }    
-        .layer3 {
-            background-image: url('/assets/img/header-layer-3.png');
-            position: absolute; top: 0; 
-        }
-        .layer4 {
-            background-image: url('/assets/img/header-layer-4.png');
-            position: absolute; top: 0; 
-        }
+        .layer1 { background-color: #B8B8B8; background-repeat: repeat-x; }
+        .layer2, .layer3, .layer4 { position: absolute; top: 0; }    
         @media (max-width: 1300px) {
             .layer2 { display: none; }
         }

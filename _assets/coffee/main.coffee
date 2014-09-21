@@ -15,14 +15,10 @@ $ ->
 
   # IMAGES LAZY LOADING
 
-  $("img.lazy").show().lazyload
+  $(".lazy").show().lazyload
     effect : "fadeIn"
-    event: "showImages"
+    threshold : 200
   
-  setTimeout ->
-    $("img.lazy").trigger("showImages")
-  , 500
-
   # GALLERY
 
   # Gallery with Isotope
