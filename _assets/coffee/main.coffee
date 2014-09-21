@@ -44,6 +44,7 @@ $ ->
     # Enable gallery section
     $("#navbar-gallery .gallery-filter .navbar-item").removeClass("active")
     $(this).parent(".navbar-item").addClass("active")
+    closeNavigations()
     return false
 
   activityIndicatorOn = ->
@@ -87,11 +88,16 @@ $ ->
 
   # NAV COLLAPSE
 
+  closeNavigations = ->
+    $(".navbar-collapse.in").slideUp "fast", -> $(this).removeClass("in") 
+
+  $(".navbar .navbar-item").click ->
+    closeNavigations() 
+
   $(".navbar .navbar-toggle").click ->
     collapsedNavId = $(this).data("target")    
     $(collapsedNavId).slideToggle("fast", ->
       $(this).toggleClass("in") 
-      #highlightSection()   
     )
 
   # SCROLL MAGIC
