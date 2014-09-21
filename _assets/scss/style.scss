@@ -571,7 +571,7 @@ section#skills {
         }
     }
     .skill-bars {
-        margin: 50px auto;
+        margin: 20px auto 50px;
         width: 100%; max-width: 600px;
         .levels {
             text-align: center;
@@ -581,6 +581,7 @@ section#skills {
                 float: left; display: block;
                 width: 20%; font-size: 0.9em;
             }
+            @media(max-width: 480px) { display: none; }
         }
         .graph {
             border-width: 1px 0 0 1px;
