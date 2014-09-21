@@ -47,16 +47,16 @@ $ ->
     return false
 
   activityIndicatorOn = ->
-    $("#lightbox-loading").show("slow")
+    $("#lightbox-loading").show()
   activityIndicatorOff = ->
-    $("#lightbox-loading").hide("fast")
+    $("#lightbox-loading").hide()
 
   overlayOn = -> 
-    $("#lightbox-overlay").fadeIn()
+    $("#lightbox-overlay").show()
     $("body").addClass("noscroll")
   overlayOff = ->
     $("body").removeClass("noscroll")
-    $("#lightbox-overlay").fadeOut("slow")
+    $("#lightbox-overlay").fadeOut("fast")
 
   captionOn = ->
     selectedImage = $("#imagelightbox").attr("src")
@@ -67,9 +67,9 @@ $ ->
       caption = $("#lightbox-caption")
       caption.find(".title").text(title)
       caption.find(".body").text(body)
-      caption.fadeIn()
+      caption.show()
   captionOff = ->
-    $("#lightbox-caption").fadeOut()
+    $("#lightbox-caption").fadeOut("fast")
 
   # Show large picture on hovering images  
   $("#gallery .gallery-item a").imageLightbox

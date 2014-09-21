@@ -356,7 +356,7 @@ nav.navbar {
 
 #lightbox-caption {
     padding: 0.625em;
-    z-index: 10001; display: none;
+    display: none; z-index: 10001;
     position: fixed; left: 0; right: 0; bottom: 0;
     text-align: center; font-size: 0.9em; color: $color-text-light;
     background-color: $color-gallery-caption;
@@ -364,10 +364,32 @@ nav.navbar {
 }
 
 #lightbox-loading {
-    position: fixed; top: 45%; left: 50%;
-    z-index: 9999; //display: none;
-    opacity: 0.9; color: $color-highlight;
-    i { font-size: 70px; }
+    width: 2.5em; height: 2.5em;
+    display: none; z-index: 10003;
+    background-color: #444; background-color: rgba( 0, 0, 0, .5 );
+    position: fixed; top: 50%; left: 50%;
+    padding: 0.625em; margin: -1.25em 0 0 -1.25em;
+    -webkit-box-shadow: 0 0 2.5em rgba( 0, 0, 0, .75 );
+    box-shadow: 0 0 2.5em rgba( 0, 0, 0, .75 );
+    border-radius: 50%;
+
+    div {
+        width: 1.25em; height: 1.25em;
+        background-color: #fff; border-radius: 50%;
+        -webkit-animation: lightbox-loading .5s ease infinite;
+        animation: lightbox-loading .5s ease infinite;
+    }
+}
+
+@-webkit-keyframes lightbox-loading {
+    from { opacity: .5; -webkit-transform: scale( .75 ); }
+    50%  { opacity: 1;  -webkit-transform: scale( 1 ); }
+    to   { opacity: .5; -webkit-transform: scale( .75 ); }
+}
+@keyframes lightbox-loading {
+    from { opacity: .5; transform: scale( .75 ); }
+    50%  { opacity: 1;  transform: scale( 1 ); }
+    to   { opacity: .5; transform: scale( .75 ); }
 }
 
 #lightbox-overlay {
@@ -376,19 +398,19 @@ nav.navbar {
     background-color: rgba( 44, 44, 44, .6 );
 }
 
-.animate-colorize {
-  -moz-animation: colorize 1s infinite linear;
-  -o-animation: colorize 1s infinite linear;
-  -webkit-animation: colorize 1s infinite linear;
-  animation: colorize 1s infinite linear;
-  display: inline-block;
+#lightbox-loading, #lightbox-overlay, #lightbox-caption {
+    -webkit-animation: fade-in .25s linear;
+    animation: fade-in .25s linear;
 }
 
-@-moz-keyframes colorize { @include animation-colorize(); }
-@-webkit-keyframes colorize { @include animation-colorize(); }
-@-o-keyframes colorize { @include animation-colorize(); }
-@-ms-keyframes colorize { @include animation-colorize(); }
-@keyframes colorize { @include animation-colorize(); }
+@-webkit-keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 body.noscroll {
     overflow: hidden;
