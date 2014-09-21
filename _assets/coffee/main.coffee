@@ -15,9 +15,14 @@ $ ->
 
   # IMAGES LAZY LOADING
 
-  $(".lazy").show().lazyload
-    effect : "fadeIn"
-    threshold : 200
+  $("img.lazy").show().lazyload
+    effect: "fadeIn"
+    threshold: 200
+
+  $(".scroll-layers .lazy").show().lazyload
+    effect: "fadeIn"
+
+  $(".scroll-layers .layer:visible .lazy").show()
   
   # GALLERY
 
@@ -142,24 +147,24 @@ $ ->
 
   # HEADER IMAGE
 
-  $(".scroll-layer").addClass("fluid") if Modernizr.touch
+  $(".scroll-layers").addClass("fluid") if Modernizr.touch
 
-  if not $(".scroll-layer").hasClass("fluid")
+  if not $(".scroll-layers").hasClass("fluid")
     parallaxTween = new TimelineMax()
     parallaxTween.add [
-      TweenMax.to("#home .scroll-layer .layer1", 2,
+      TweenMax.to("#home .scroll-layers .layer1", 2,
         backgroundPosition: "center -200px"
         ease: Linear.easeNone
       )
-      TweenMax.to("#home .scroll-layer .layer2", 2,
+      TweenMax.to("#home .scroll-layers .layer2", 2,
         backgroundPosition: "center -200px"
         ease: Linear.easeNone
       )
-      TweenMax.to("#home .scroll-layer .layer3", 2,
+      TweenMax.to("#home .scroll-layers .layer3", 2,
         backgroundPosition: "center -300px"
         ease: Linear.easeNone
       )
-      TweenMax.to("#home .scroll-layer .layer4", 2,
+      TweenMax.to("#home .scroll-layers .layer4", 2,
         backgroundPosition: "center -450px"
         ease: Linear.easeNone
       )

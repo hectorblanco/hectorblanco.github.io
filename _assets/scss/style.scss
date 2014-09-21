@@ -519,7 +519,7 @@ nav#navbar-gallery {
 }
 
 header#home {
-    .scroll-layer {
+    .scroll-layers {
     	.title {    
             position: absolute; top: 0;
             width: 100%; padding: 60px 10px;
@@ -540,22 +540,21 @@ header#home {
                 }
             }
         }
-    	.layer1, .layer2, .layer3, .layer4 {
-    	    height: 853px;
-    	    width: 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center top;
-            &.fluid { background-attachment: scroll; }
+    	.layer {
+            div {
+                height: 853px; width: 100%;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center top;
+                &.fluid { background-attachment: scroll; }
+            }
+            .layer1 { background-color: #B8B8B8; background-repeat: repeat-x; }
+            .layer2, .layer3, .layer4 { position: absolute; top: 0; }    
     	}
-        .layer1 { background-color: #B8B8B8; background-repeat: repeat-x; }
-        .layer2, .layer3, .layer4 { position: absolute; top: 0; }    
-        @media (max-width: 1300px) {
-            .layer2 { display: none; }
-        }
+        @media (min-width: 769px) { .lazy { display: block; } }
         @media (max-width: 768px) {
             .title { position: static; }
-            .layer1, .layer3, .layer4 { display: none; }
+            .layer { display: none; }
         }
     }
 }
