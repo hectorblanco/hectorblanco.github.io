@@ -140,9 +140,9 @@ $ ->
 
   # HEADER IMAGE
 
-  if Modernizr.touch
-    backgroundImage.addClass("fluid")
-  else
+  $(".scroll-layer").addClass("fluid") if Modernizr.touch
+
+  if not $(".scroll-layer").hasClass("fluid")
     parallaxTween = new TimelineMax()
     parallaxTween.add [
       TweenMax.to("#home .scroll-layer .layer1", 2,
