@@ -1,7 +1,9 @@
 $color-text-light: #d5d5d5;
 $color-text-dark: #444444;
 $color-link: #cda51c;
+
 $color-highlight: #cda51c;
+$color-white: #ffffff;
 
 $color-divisor: #e4d493;
 $color-background: #ffffff;
@@ -112,6 +114,12 @@ $color-skill-label: #d5d5d5;
     background: -o-linear-gradient(right, $gradients);
     background: -moz-linear-gradient(right, $gradients);
     background: linear-gradient(to right, $gradients);
+}
+
+@mixin caption-style() {
+    font-size: 0.9em; color: $color-text-light;
+    background-color: $color-gallery-caption;
+    .title { @include font-thick(); color: $color-white; letter-spacing: 1px; }
 }
 
 @mixin bounce-text() {
@@ -393,9 +401,8 @@ nav.navbar {
     padding: 0.625em;
     display: none; z-index: 10001;
     position: fixed; left: 0; right: 0; bottom: 0;
-    text-align: center; font-size: 0.9em; color: $color-text-light;
-    background-color: $color-gallery-caption;
-    .title { @include font-thick(); }
+    text-align: center;
+    @include caption-style();
 }
 
 #lightbox-loading {
@@ -595,9 +602,17 @@ section#gallery {
     h2 a { color: darken($color-gallery, 20%); }
     .gallery { margin: 0 auto; }
     .gallery-item {
-        margin: 20px;
+        margin: 20px; position: relative;
         background-color: $color-gallery-frame; border: 1px solid $color-gallery-frame;
-        img.thumbnail { width: 300px; height: 300px; }
+        overflow: hidden;
+        img.thumbnail, .caption { width: 300px; height: 300px; }
+        .caption {
+            position: absolute; top: 300px;
+            padding: 10px; opacity: 0.95;
+            @include caption-style();
+            @include transition(all 0.5s ease-out);
+        }
+        &:hover .caption { top: 150px; }
     }
     @media (max-width: 340px) {
         >.wrapper >.container { padding: 0; }
