@@ -21,8 +21,9 @@ $ ->
 
   $(".scroll-layers .lazy").show().lazyload
     effect: "fadeIn"
+    event: "page-loaded"
 
-  $(".scroll-layers .layer:visible .lazy").show()
+  $(".scroll-layers .layer:visible .lazy").show().trigger("page-loaded")
   
   # GALLERY
 
@@ -152,11 +153,7 @@ $ ->
   if not $(".scroll-layers").hasClass("fluid")
     parallaxTween = new TimelineMax()
     parallaxTween.add [
-      TweenMax.to("#home .scroll-layers .layer1", 2,
-        backgroundPosition: "center -200px"
-        ease: Linear.easeNone
-      )
-      TweenMax.to("#home .scroll-layers .layer2", 2,
+      TweenMax.to("#home .scroll-layers .layer1, #home .scroll-layers .layer2", 2,
         backgroundPosition: "center -200px"
         ease: Linear.easeNone
       )
@@ -208,7 +205,7 @@ $ ->
     highlightSection aboutSection.attr("id")
 
   enableGallerySection = (e) ->
-    highlightSection gallerySection.attr("id")
+    highlightSection gallerySection.attr("id")    
 
   enableSkillsSection = (e) ->
     highlightSection skillsSection.attr("id")
