@@ -593,7 +593,7 @@ section#about {
     }
 	img {
         float: left; margin: 0 10% 5% 0;
-        @media (max-width: 480px) { float: none; }
+        @media (max-width: 480px) { display: none; }
     }
 }
 
