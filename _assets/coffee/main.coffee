@@ -42,7 +42,9 @@ $ ->
       # Filter gallery items
       filter = $(this).data("filter")
       gallery.isotope
-        filter: ".#{filter}"
+        filter: ".#{filter}"            
+    # Force pictures loading
+    gallerySection.find("img.lazy").trigger("appear")
     # Enable gallery section
     $("#navbar-gallery .gallery-filter .navbar-item").removeClass("active")
     $(this).parent(".navbar-item").addClass("active")
