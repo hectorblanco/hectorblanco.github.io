@@ -558,7 +558,7 @@ header#home {
             .layer1 { background-color: #B8B8B8; background-repeat: repeat-x; }
             .layer2, .layer3, .layer4 { position: absolute; top: 0; }    
     	}
-        @media (min-width: 769px) { .lazy { display: block; } }
+        @media (min-width: 769px) { .img-lazy { display: block; } }
         @media (max-width: 768px) {
             .title { position: static; }
             .layer { display: none; }
@@ -591,7 +591,7 @@ section#about {
         padding: 10px 0;
         strong { @include font-medium(); }
     }
-	img {
+	.selfportrait {
         float: left; margin: 0 10% 5% 0;
         @media (max-width: 480px) { display: none; }
     }

@@ -15,15 +15,17 @@ $ ->
 
   # IMAGES LAZY LOADING
 
-  $("img.lazy").show().lazyload
+  $(".img-lazy").not(".hidden-device").show().lazyload
     effect: "fadeIn"
     threshold: 200
 
-  $(".scroll-layers .lazy").show().lazyload
+  $(".img-lazy.hidden-device").lazyload
     effect: "fadeIn"
     event: "page-loaded"
 
-  $(".scroll-layers .layer:visible .lazy").show().trigger("page-loaded")
+  $(".img-lazy.hidden-device").each ->
+    if $(this).parent().is(":visible")
+      $(this).show().trigger("page-loaded")
   
   # GALLERY
 
