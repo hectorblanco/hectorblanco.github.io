@@ -91,6 +91,11 @@ $color-skill-label: #d5d5d5;
     transition: $transitions;
 }
 
+@mixin transition-delay($delay) {
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
 @mixin transform($transform) {
     -webkit-transform: $transform;
     -moz-transform: $transform;
@@ -611,6 +616,7 @@ section#gallery {
             padding: 10px; opacity: 0.95;
             @include caption-style();
             @include transition(all 0.5s ease-out);
+            @include transition-delay(0.5s);            
         }
         &:hover .caption { top: 150px; }
     }
