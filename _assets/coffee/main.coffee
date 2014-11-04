@@ -48,7 +48,7 @@ $ ->
       # Recalculate scenes
       updateScenes()
     # Force pictures loading
-    gallerySection.find("img.lazy").trigger("appear")
+    gallerySection.find(".img-lazy").trigger("appear")
     # Enable gallery section
     $("#navbar-gallery .gallery-filter .navbar-item").removeClass("active")
     $(this).parent(".navbar-item").addClass("active")
