@@ -1,5 +1,7 @@
 $ ->
-  isIe = $("meta[name=isie]").size() > 0
+  w = $(window)
+  isRetina = w.devicePixelRatio > 1
+
 
   homeSection = $("#home")
   aboutSection = $("#about")
@@ -15,18 +17,31 @@ $ ->
 
   # IMAGES LAZY LOADING
 
-  $(".img-lazy").not(".hidden-device").show().lazyload
-    effect: "fadeIn"
-    threshold: 200
+  lazySource = if isRetina then "original-rd" else "original"
+  placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
 
-  $(".img-lazy.hidden-device").lazyload
-    effect: "fadeIn"
-    event: "page-loaded"
+  $(".img-lazy").each ->
+    self = $(this)
+    if self.parent().is(":visible")
+      self.attr("src", placeholder) if self.is("img")
+      imgSource = self.data(lazySource) ? self.data("original")
+      self.one "appear", -> $("<img />").bind("load", -> loadImage(self, imgSource)).attr("src", imgSource)
 
-  $(".img-lazy.hidden-device").each ->
-    if $(this).parent().is(":visible")
-      $(this).show().trigger("page-loaded")
-  
+  loadImage = (self, imgSource) ->
+    self.hide()
+    if self.is("img")
+      self.attr("src", imgSource)
+    else
+      self.css("background-image", "url('#{imgSource}')")
+    self.fadeIn("slow")
+    self.removeClass("img-lazy").removeAttr("data-original").removeAttr("data-original-rd")
+
+  homeSection.find(".img-lazy").trigger("appear")
+  setTimeout (-> aboutSection.find(".img-lazy").trigger("appear")), 200
+  setTimeout (-> gallerySection.find(".img-lazy").trigger("appear")), 400
+  setTimeout (-> skillsSection.find(".img-lazy").trigger("appear")), 600
+  setTimeout (-> contactSection.find(".img-lazy").trigger("appear")), 800
+
   # GALLERY
 
   # Gallery with Isotope
@@ -136,7 +151,7 @@ $ ->
     updateContactHeight()
 
   updateScenes()
-  $(window).on "resize", updateScenes  
+  w.on "resize", updateScenes  
 
   # SKILL BARS
 
@@ -278,7 +293,7 @@ $ ->
     return unless target and target.length > 0
     targetOffset = target.offset().top + menuHeightOffset + offset
     targetId = target.attr("id")
-    if targetOffset isnt $(window).scrollTop()
+    if targetOffset isnt w.scrollTop()
       $("html,body").animate scrollTop : targetOffset,
         duration: 500
         complete: ->
