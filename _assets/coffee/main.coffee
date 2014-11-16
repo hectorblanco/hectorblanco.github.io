@@ -1,7 +1,9 @@
 $ ->
   w = $(window)
-  isRetina = w.devicePixelRatio > 1
-
+  Modernizr.addTest 'highresdisplay', ->
+    return unless window.matchMedia
+    mq = window.matchMedia("only screen and (-moz-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen  and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)")
+    return true if mq and mq.matches
 
   homeSection = $("#home")
   aboutSection = $("#about")
@@ -17,7 +19,7 @@ $ ->
 
   # IMAGES LAZY LOADING
 
-  lazySource = if isRetina then "original-rd" else "original"
+  lazySource = if Modernizr.highresdisplay then "original-rd" else "original"
   placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
 
   $(".img-lazy").each ->
