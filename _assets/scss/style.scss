@@ -566,6 +566,10 @@ header#home {
                 background-size: 1000px 427px;
                 &.layer3, &.layer4 { background-size: 585px 427px; }
             }
+            .layer-space {
+                background-color: #B8B8B8; background-repeat: repeat-x;
+                height: 227px;
+            }
     	}
         @media (min-width: 769px) { .img-lazy { display: block; } }
         @media (max-width: 768px) {
