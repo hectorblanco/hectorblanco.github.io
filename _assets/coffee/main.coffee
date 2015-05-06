@@ -55,15 +55,14 @@ $ ->
 
   # Filter images according to topic
   $("#navbar-gallery .gallery-filter a").click ->
-    # Scroll to gallery before filtering
+    # Scroll to gallery while filtering
     scrollToTarget gallerySection
-    $("html,body").promise().done =>
-      # Filter gallery items
-      filter = $(this).data("filter")
-      gallery.isotope
-        filter: ".#{filter}"            
-      # Recalculate scenes
-      updateScenes()
+    # Filter gallery items
+    filter = $(this).data("filter")
+    gallery.isotope
+      filter: ".#{filter}"            
+    # Recalculate scenes
+    updateScenes()
     # Force pictures loading
     gallerySection.find(".img-lazy").trigger("appear")
     # Enable gallery section
