@@ -506,7 +506,7 @@ section#gallery {
   section#gallery .gallery {
     margin: 0 auto; }
   section#gallery .gallery-item {
-    margin: 20px;
+    margin: 2px;
     position: relative;
     background-color: #bbbbbb;
     border: 1px solid #bbbbbb;
