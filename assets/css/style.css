@@ -471,25 +471,6 @@ header#home .scroll-layers .title {
       font-family: "Roboto", sans-serif;
       font-weight: 100;
       font-size: 2em; }
-header#home .scroll-layers .layer div {
-  height: 427px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center top;
-  background-size: 585px 427px; }
-  header#home .scroll-layers .layer div.fluid {
-    background-attachment: scroll; }
-header#home .scroll-layers .layer .layer1 {
-  background-color: #B8B8B8;
-  background-repeat: repeat-x;
-  background-size: 968px 427px; }
-header#home .scroll-layers .layer .layer2, header#home .scroll-layers .layer .layer3, header#home .scroll-layers .layer .layer4 {
-  position: absolute;
-  top: 0;
-  background-size: 1000px 427px; }
-  header#home .scroll-layers .layer .layer2.layer3, header#home .scroll-layers .layer .layer2.layer4, header#home .scroll-layers .layer .layer3.layer3, header#home .scroll-layers .layer .layer3.layer4, header#home .scroll-layers .layer .layer4.layer3, header#home .scroll-layers .layer .layer4.layer4 {
-    background-size: 585px 427px; }
 header#home .scroll-layers .layer .layer-space {
   background-color: #B8B8B8;
   background-repeat: repeat-x;
@@ -517,23 +498,6 @@ section {
         section > .wrapper > .container h2 a span {
           font-family: "Roboto", sans-serif;
           font-weight: 300; }
-
-section#about {
-  background-color: #eacc65;
-  border-bottom: 10px solid #e4d493; }
-  section#about h2 a {
-    color: #cda51c; }
-  section#about p {
-    padding: 10px 0; }
-    section#about p strong {
-      font-family: "Roboto", sans-serif;
-      font-weight: 500; }
-  section#about .selfportrait {
-    float: left;
-    margin: 0 10% 5% 0; }
-    @media (max-width: 480px) {
-      section#about .selfportrait {
-        display: none; } }
 
 section#gallery {
   background-color: #ffffff; }
@@ -577,96 +541,6 @@ section#gallery {
       padding: 0; }
     section#gallery .gallery-item {
       margin: 2px auto; } }
-
-section#skills {
-  background-color: #ffffff; }
-  section#skills h2 a {
-    color: #cccccc; }
-  section#skills .skill > label {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    vertical-align: middle; }
-  section#skills .skill-bars {
-    margin: 20px auto 50px;
-    width: 100%;
-    max-width: 600px; }
-    section#skills .skill-bars .levels {
-      text-align: center;
-      padding: 10px; }
-      section#skills .skill-bars .levels label {
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        float: left;
-        display: block;
-        width: 20%;
-        font-size: 0.9em; }
-      @media (max-width: 480px) {
-        section#skills .skill-bars .levels {
-          display: none; } }
-    section#skills .skill-bars .graph {
-      border-width: 1px 0 0 1px;
-      border-style: solid;
-      border-color: #aaaaaa;
-      padding: 0 10px 10px 0; }
-      section#skills .skill-bars .graph .bar {
-        width: 0%;
-        margin: 20px 0;
-        padding: 10px;
-        text-align: right;
-        background-color: #eacc65;
-        background: -webkit-linear-gradient(left, #eacc65, #eacc65, rgba(234, 204, 101, 0));
-        background: -o-linear-gradient(right, #eacc65, #eacc65, rgba(234, 204, 101, 0));
-        background: -moz-linear-gradient(right, #eacc65, #eacc65, rgba(234, 204, 101, 0));
-        background: linear-gradient(to right, #eacc65, #eacc65, rgba(234, 204, 101, 0)); }
-        section#skills .skill-bars .graph .bar label {
-          margin-right: 10px;
-          text-transform: uppercase;
-          font-size: 0.8em;
-          font-family: "Roboto", sans-serif;
-          font-weight: 500;
-          white-space: nowrap; }
-        section#skills .skill-bars .graph .bar.level-begginer {
-          -webkit-transition: width 0.2s ease-out;
-          -moz-transition: width 0.2s ease-out;
-          -ms-transition: width 0.2s ease-out;
-          -o-transition: width 0.2s ease-out;
-          transition: width 0.2s ease-out; }
-          section#skills .skill-bars .graph .bar.level-begginer.loaded {
-            width: 20%; }
-        section#skills .skill-bars .graph .bar.level-familiar {
-          -webkit-transition: width 0.4s ease-out;
-          -moz-transition: width 0.4s ease-out;
-          -ms-transition: width 0.4s ease-out;
-          -o-transition: width 0.4s ease-out;
-          transition: width 0.4s ease-out; }
-          section#skills .skill-bars .graph .bar.level-familiar.loaded {
-            width: 40%; }
-        section#skills .skill-bars .graph .bar.level-proficient {
-          -webkit-transition: width 0.6s ease-out;
-          -moz-transition: width 0.6s ease-out;
-          -ms-transition: width 0.6s ease-out;
-          -o-transition: width 0.6s ease-out;
-          transition: width 0.6s ease-out; }
-          section#skills .skill-bars .graph .bar.level-proficient.loaded {
-            width: 60%; }
-        section#skills .skill-bars .graph .bar.level-expert {
-          -webkit-transition: width 0.8s ease-out;
-          -moz-transition: width 0.8s ease-out;
-          -ms-transition: width 0.8s ease-out;
-          -o-transition: width 0.8s ease-out;
-          transition: width 0.8s ease-out; }
-          section#skills .skill-bars .graph .bar.level-expert.loaded {
-            width: 80%; }
-        section#skills .skill-bars .graph .bar.level-master {
-          -webkit-transition: width 1s ease-out;
-          -moz-transition: width 1s ease-out;
-          -ms-transition: width 1s ease-out;
-          -o-transition: width 1s ease-out;
-          transition: width 1s ease-out; }
-          section#skills .skill-bars .graph .bar.level-master.loaded {
-            width: 100%; }
 
 section#contact {
   background-color: #292929;

@@ -528,7 +528,7 @@ nav#navbar-gallery {
 
 header#home {
     .scroll-layers {
-    	.title {    
+        .title {    
             position: absolute; top: 0;
             width: 100%; padding: 65px 10px;
             background-color: $color-header;
@@ -548,29 +548,29 @@ header#home {
                 }
             }
         }
-    	.layer {
-            div {
-                height: 427px; width: 100%;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: center top;
-                background-size: 585px 427px;
-                &.fluid { background-attachment: scroll; }
-            }
-            .layer1 {
-                background-color: #B8B8B8; background-repeat: repeat-x;
-                background-size: 968px 427px;
-            }
-            .layer2, .layer3, .layer4 {
-                position: absolute; top: 0;
-                background-size: 1000px 427px;
-                &.layer3, &.layer4 { background-size: 585px 427px; }
-            }
+        .layer {
+            // div {
+            //     height: 427px; width: 100%;
+            //     background-repeat: no-repeat;
+            //     background-attachment: fixed;
+            //     background-position: center top;
+            //     background-size: 585px 427px;
+            //     &.fluid { background-attachment: scroll; }
+            // }
+            // .layer1 {
+            //     background-color: #B8B8B8; background-repeat: repeat-x;
+            //     background-size: 968px 427px;
+            // }
+            // .layer2, .layer3, .layer4 {
+            //     position: absolute; top: 0;
+            //     background-size: 1000px 427px;
+            //     &.layer3, &.layer4 { background-size: 585px 427px; }
+            // }
             .layer-space {
                 background-color: #B8B8B8; background-repeat: repeat-x;
                 height: 227px;
             }
-    	}
+        }
         @media (min-width: 769px) { .img-lazy { display: block; } }
         @media (max-width: 768px) {
             .title { position: static; }
@@ -596,19 +596,19 @@ section {
     }
 }
 
-section#about {
-	background-color: $color-about;
-	border-bottom: 10px solid $color-divisor;
-    h2 a { color: darken($color-about, 20%); }
-    p {
-        padding: 10px 0;
-        strong { @include font-medium(); }
-    }
-	.selfportrait {
-        float: left; margin: 0 10% 5% 0;
-        @media (max-width: 480px) { display: none; }
-    }
-}
+// section#about {
+// 	background-color: $color-about;
+// 	border-bottom: 10px solid $color-divisor;
+//     h2 a { color: darken($color-about, 20%); }
+//     p {
+//         padding: 10px 0;
+//         strong { @include font-medium(); }
+//     }
+// 	.selfportrait {
+//         float: left; margin: 0 10% 5% 0;
+//         @media (max-width: 480px) { display: none; }
+//     }
+// }
 
 section#gallery {
     background-color: $color-gallery;
@@ -634,69 +634,69 @@ section#gallery {
     }
 }
 
-section#skills {
-	background-color: $color-skills;
-    h2 a { color: darken($color-skills, 20%); }
-    .skill {        
-        >label {
-            @include font-thin(); font-size: 1.5em; letter-spacing: 2px;
-            vertical-align: middle;
-        }
-    }
-    .skill-bars {
-        margin: 20px auto 50px;
-        width: 100%; max-width: 600px;
-        .levels {
-            text-align: center;
-            padding: 10px;
-            label {
-                @include font-thin();
-                float: left; display: block;
-                width: 20%; font-size: 0.9em;
-            }
-            @media(max-width: 480px) { display: none; }
-        }
-        .graph {
-            border-width: 1px 0 0 1px;
-            border-style: solid;
-            border-color: $color-skill-axis;
-            padding: 0 10px 10px 0;
-            .bar {
-                width: 0%;
-                margin: 20px 0; padding: 10px;
-                text-align: right;
-                background-color: $color-skill-bar-start;
-                @include gradient-left-to-right($color-skill-bar-start, $color-skill-bar-start, $color-skill-bar-end);
+// section#skills {
+// 	background-color: $color-skills;
+//     h2 a { color: darken($color-skills, 20%); }
+//     .skill {        
+//         >label {
+//             @include font-thin(); font-size: 1.5em; letter-spacing: 2px;
+//             vertical-align: middle;
+//         }
+//     }
+//     .skill-bars {
+//         margin: 20px auto 50px;
+//         width: 100%; max-width: 600px;
+//         .levels {
+//             text-align: center;
+//             padding: 10px;
+//             label {
+//                 @include font-thin();
+//                 float: left; display: block;
+//                 width: 20%; font-size: 0.9em;
+//             }
+//             @media(max-width: 480px) { display: none; }
+//         }
+//         .graph {
+//             border-width: 1px 0 0 1px;
+//             border-style: solid;
+//             border-color: $color-skill-axis;
+//             padding: 0 10px 10px 0;
+//             .bar {
+//                 width: 0%;
+//                 margin: 20px 0; padding: 10px;
+//                 text-align: right;
+//                 background-color: $color-skill-bar-start;
+//                 @include gradient-left-to-right($color-skill-bar-start, $color-skill-bar-start, $color-skill-bar-end);
 
-                label {
-                    margin-right: 10px;
-                    text-transform: uppercase; font-size: 0.8em;
-                    @include font-medium(); white-space: nowrap;
-                }
-                &.level-begginer {
-                    @include transition(width 0.2s ease-out);                    
-                    &.loaded { width: 20%; }
-                }
-                &.level-familiar {
-                    @include transition(width 0.4s ease-out);
-                    &.loaded { width: 40%; }
-                }
-                &.level-proficient {
-                    @include transition(width 0.6s ease-out);
-                    &.loaded { width: 60%; }
-                }
-                &.level-expert {
-                    @include transition(width 0.8s ease-out);
-                    &.loaded { width: 80%; }
-                }
-                &.level-master {
-                    @include transition(width 1s ease-out);
-                    &.loaded { width: 100%; }
-                }
-            }
-        }
-    }
-}
+//                 label {
+//                     margin-right: 10px;
+//                     text-transform: uppercase; font-size: 0.8em;
+//                     @include font-medium(); white-space: nowrap;
+//                 }
+//                 &.level-begginer {
+//                     @include transition(width 0.2s ease-out);                    
+//                     &.loaded { width: 20%; }
+//                 }
+//                 &.level-familiar {
+//                     @include transition(width 0.4s ease-out);
+//                     &.loaded { width: 40%; }
+//                 }
+//                 &.level-proficient {
+//                     @include transition(width 0.6s ease-out);
+//                     &.loaded { width: 60%; }
+//                 }
+//                 &.level-expert {
+//                     @include transition(width 0.8s ease-out);
+//                     &.loaded { width: 80%; }
+//                 }
+//                 &.level-master {
+//                     @include transition(width 1s ease-out);
+//                     &.loaded { width: 100%; }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 section#contact {
 	background-color: $color-contact;    
