@@ -359,7 +359,7 @@ body {
 nav.navbar {
   width: 100%; }
   nav.navbar .container {
-    padding: 0 15px; }
+    padding: 0; }
     nav.navbar .container a {
       font-family: "Roboto", sans-serif;
       font-weight: 300; }
@@ -404,7 +404,7 @@ nav#navbar-menu {
     box-shadow: 0px 7px 30px 0px rgba(50, 50, 50, 0.5); }
 
 nav#navbar-gallery {
-  background-color: rgba(233, 233, 233, 0.95);
+  background-color: rgba(200, 200, 200, 0.95);
   z-index: 1030;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
   -moz-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.2);
@@ -427,9 +427,9 @@ nav#navbar-gallery {
     nav#navbar-gallery ul.navbar-nav li.navbar-item:hover > a, nav#navbar-gallery ul.navbar-nav li.navbar-item.active > a {
       color: #000000; }
     nav#navbar-gallery ul.navbar-nav li.navbar-item:hover {
-      background-color: rgba(213, 213, 213, 0.3); }
+      background-color: rgba(170, 170, 170, 0.3); }
     nav#navbar-gallery ul.navbar-nav li.navbar-item.active {
-      background-color: rgba(213, 213, 213, 0.7); }
+      background-color: rgba(170, 170, 170, 0.7); }
   nav#navbar-gallery.navbar-stuck {
     -webkit-box-shadow: 0px 7px 30px 0px rgba(50, 50, 50, 0.2);
     -moz-box-shadow: 0px 7px 30px 0px rgba(50, 50, 50, 0.2);
@@ -439,8 +439,8 @@ header#home .scroll-layers .title {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 60px 10px;
-  background-color: rgba(255, 255, 255, 0.6);
+  padding: 65px 10px;
+  background-color: #eacc65;
   -webkit-animation-name: bounceInDown;
   -moz-animation-name: bounceInDown;
   -o-animation-name: bounceInDown;
@@ -453,9 +453,9 @@ header#home .scroll-layers .title {
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-box-shadow: 0px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  -moz-box-shadow: 0px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  box-shadow: 0px 1px 5px 0px rgba(255, 255, 255, 0.6); }
+  -webkit-box-shadow: 0px 1px 5px 0px #eacc65;
+  -moz-box-shadow: 0px 1px 5px 0px #eacc65;
+  box-shadow: 0px 1px 5px 0px #eacc65; }
   header#home .scroll-layers .title .container {
     color: #444444;
     z-index: 100; }
@@ -536,9 +536,9 @@ section#about {
         display: none; } }
 
 section#gallery {
-  background-color: #e9e9e9; }
+  background-color: #ffffff; }
   section#gallery h2 a {
-    color: #b6b6b6; }
+    color: #cccccc; }
   section#gallery .gallery {
     margin: 0 auto; }
   section#gallery .gallery-item {

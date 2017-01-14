@@ -6,9 +6,9 @@ $ ->
     return true if mq and mq.matches
 
   homeSection = $("#home")
-  aboutSection = $("#about")
+  # aboutSection = $("#about")
   gallerySection = $("#gallery")
-  skillsSection = $("#skills")
+  # skillsSection = $("#skills")
   contactSection = $("#contact")
 
   menuHeightOffset = $("#navbar-menu").outerHeight() * -1
@@ -39,10 +39,10 @@ $ ->
     self.removeClass("img-lazy").removeAttr("data-original").removeAttr("data-original-rd")
 
   homeSection.find(".img-lazy").trigger("appear")
-  setTimeout (-> aboutSection.find(".img-lazy").trigger("appear")), 200
-  setTimeout (-> gallerySection.find(".img-lazy").trigger("appear")), 400
-  setTimeout (-> skillsSection.find(".img-lazy").trigger("appear")), 600
-  setTimeout (-> contactSection.find(".img-lazy").trigger("appear")), 800
+  # setTimeout (-> aboutSection.find(".img-lazy").trigger("appear")), 200
+  setTimeout (-> gallerySection.find(".img-lazy").trigger("appear")), 200
+  # setTimeout (-> skillsSection.find(".img-lazy").trigger("appear")), 600
+  setTimeout (-> contactSection.find(".img-lazy").trigger("appear")), 400
 
   # GALLERY
 
@@ -132,23 +132,23 @@ $ ->
   getHomeHeight = -> return sceneHeights.home  
   updateHomeHeight = -> sceneHeights.home = homeSection.outerHeight()
 
-  getAboutHeight = -> return sceneHeights.about  
-  updateAboutHeight = -> sceneHeights.about = aboutSection.outerHeight()
+  # getAboutHeight = -> return sceneHeights.about  
+  # updateAboutHeight = -> sceneHeights.about = aboutSection.outerHeight()
 
   getGalleryHeight = -> return sceneHeights.gallery  
   updateGalleryHeight = -> sceneHeights.gallery = gallerySection.outerHeight()
 
-  getSkillsHeight = -> return sceneHeights.skills  
-  updateSkillsHeight = -> sceneHeights.skills = skillsSection.outerHeight()
+  # getSkillsHeight = -> return sceneHeights.skills  
+  # updateSkillsHeight = -> sceneHeights.skills = skillsSection.outerHeight()
 
   getContactHeight = -> return sceneHeights.contact  
   updateContactHeight = -> sceneHeights.contact = contactSection.outerHeight()
 
   updateScenes = ->
     updateHomeHeight()
-    updateAboutHeight()
+    # updateAboutHeight()
     updateGalleryHeight()
-    updateSkillsHeight()
+    # updateSkillsHeight()
     updateContactHeight()
 
   updateScenes()
@@ -156,64 +156,64 @@ $ ->
 
   # SKILL BARS
 
-  enableSkillBar = (bar) ->
-    bar.find(".graph .bar").addClass("loaded")
+  # enableSkillBar = (bar) ->
+  #   bar.find(".graph .bar").addClass("loaded")
 
-  enableDesignerSkills = -> enableSkillBar skillsSection.find("#designer-skills")
-  enableSoftwareSkills = -> enableSkillBar skillsSection.find("#software-skills")
-  enableWebSkills = -> enableSkillBar skillsSection.find("#web-skills")
-  enableLanguageSkills = -> enableSkillBar skillsSection.find("#language-skills")
+  # enableDesignerSkills = -> enableSkillBar skillsSection.find("#designer-skills")
+  # enableSoftwareSkills = -> enableSkillBar skillsSection.find("#software-skills")
+  # enableWebSkills = -> enableSkillBar skillsSection.find("#web-skills")
+  # enableLanguageSkills = -> enableSkillBar skillsSection.find("#language-skills")
 
-  if Modernizr.touch
-    skillsSection.find(".skill-bars").each -> enableSkillBar $(this)
-  else
-    loadDesignerSkillsScene = new ScrollScene  
-      triggerElement: "#designer-skills"
-      triggerHook: 0.5
-    loadDesignerSkillsScene.on("enter", enableDesignerSkills).addTo(scrollController)
+  # if Modernizr.touch
+  #   skillsSection.find(".skill-bars").each -> enableSkillBar $(this)
+  # else
+  #   loadDesignerSkillsScene = new ScrollScene  
+  #     triggerElement: "#designer-skills"
+  #     triggerHook: 0.5
+  #   loadDesignerSkillsScene.on("enter", enableDesignerSkills).addTo(scrollController)
 
-    loadSoftwareSkillsScene = new ScrollScene  
-      triggerElement: "#software-skills"
-      triggerHook: 0.5
-    loadSoftwareSkillsScene.on("enter", enableSoftwareSkills).addTo(scrollController)
+  #   loadSoftwareSkillsScene = new ScrollScene  
+  #     triggerElement: "#software-skills"
+  #     triggerHook: 0.5
+  #   loadSoftwareSkillsScene.on("enter", enableSoftwareSkills).addTo(scrollController)
 
-    loadWebSkillsScene = new ScrollScene  
-      triggerElement: "#web-skills"
-      triggerHook: 0.5
-    loadWebSkillsScene.on("enter", enableWebSkills).addTo(scrollController)
+  #   loadWebSkillsScene = new ScrollScene  
+  #     triggerElement: "#web-skills"
+  #     triggerHook: 0.5
+  #   loadWebSkillsScene.on("enter", enableWebSkills).addTo(scrollController)
 
-    loadLanguageSkillsScene = new ScrollScene  
-      triggerElement: "#language-skills"
-      triggerHook: 0.5
-    loadLanguageSkillsScene.on("enter", enableLanguageSkills).addTo(scrollController)
+  #   loadLanguageSkillsScene = new ScrollScene  
+  #     triggerElement: "#language-skills"
+  #     triggerHook: 0.5
+  #   loadLanguageSkillsScene.on("enter", enableLanguageSkills).addTo(scrollController)
 
   # HEADER IMAGE
 
-  $(".scroll-layers").addClass("fluid") if Modernizr.touch
+  # $(".scroll-layers").addClass("fluid") if Modernizr.touch
 
-  if not $(".scroll-layers").hasClass("fluid")
-    parallaxTween = new TimelineMax()
-    parallaxTween.add [
-      TweenMax.to("#home .scroll-layers .layer1, #home .scroll-layers .layer2", 2,
-        backgroundPosition: "center -200px"
-        ease: Linear.easeNone
-      )
-      TweenMax.to("#home .scroll-layers .layer3", 2,
-        backgroundPosition: "center -300px"
-        ease: Linear.easeNone
-      )
-      TweenMax.to("#home .scroll-layers .layer4", 2,
-        backgroundPosition: "center -450px"
-        ease: Linear.easeNone
-      )
-    ]
+  # if not $(".scroll-layers").hasClass("fluid")
+  #   parallaxTween = new TimelineMax()
+  #   parallaxTween.add [
+  #     TweenMax.to("#home .scroll-layers .layer1, #home .scroll-layers .layer2", 2,
+  #       backgroundPosition: "center -200px"
+  #       ease: Linear.easeNone
+  #     )
+  #     TweenMax.to("#home .scroll-layers .layer3", 2,
+  #       backgroundPosition: "center -300px"
+  #       ease: Linear.easeNone
+  #     )
+  #     TweenMax.to("#home .scroll-layers .layer4", 2,
+  #       backgroundPosition: "center -450px"
+  #       ease: Linear.easeNone
+  #     )
+  #   ]
 
-    parallaxScene = new ScrollScene
-      triggerElement: "#home"
-      triggerHook: 0
-      offset: 0
-      duration: $("#home").height()
-    parallaxScene.setTween(parallaxTween).addTo(scrollController)
+  #   parallaxScene = new ScrollScene
+  #     triggerElement: "#home"
+  #     triggerHook: 0
+  #     offset: 0
+  #     duration: $("#home").height()
+  #   parallaxScene.setTween(parallaxTween).addTo(scrollController)
 
   # TOP NAVIGATION MENU
 
@@ -240,9 +240,9 @@ $ ->
     menuSections.has("a[href~='#{sectionId}']").addClass("active")      
 
   enableHomeSection = -> highlightSection homeSection.attr("id")
-  enableAboutSection = -> highlightSection aboutSection.attr("id")
+  # enableAboutSection = -> highlightSection aboutSection.attr("id")
   enableGallerySection = -> highlightSection gallerySection.attr("id")    
-  enableSkillsSection = -> highlightSection skillsSection.attr("id")
+  # enableSkillsSection = -> highlightSection skillsSection.attr("id")
   enableContactSection = -> highlightSection contactSection.attr("id")
 
   homeSectionScene = new ScrollScene
@@ -252,12 +252,12 @@ $ ->
     duration: getHomeHeight
   homeSectionScene.on("enter", enableHomeSection).addTo(scrollController)
 
-  aboutSectionScene = new ScrollScene
-    triggerElement: "##{aboutSection.attr("id")}"
-    triggerHook: 0
-    offset: menuHeightOffset
-    duration: getAboutHeight
-  aboutSectionScene.on("enter", enableAboutSection).addTo(scrollController)
+  # aboutSectionScene = new ScrollScene
+  #   triggerElement: "##{aboutSection.attr("id")}"
+  #   triggerHook: 0
+  #   offset: menuHeightOffset
+  #   duration: getAboutHeight
+  # aboutSectionScene.on("enter", enableAboutSection).addTo(scrollController)
 
   gallerySectionScene = new ScrollScene
     triggerElement: "##{gallerySection.attr("id")}"
@@ -266,12 +266,12 @@ $ ->
     duration: getGalleryHeight
   gallerySectionScene.on("enter", enableGallerySection).addTo(scrollController)
 
-  skillsSectionScene = new ScrollScene
-    triggerElement: "##{skillsSection.attr("id")}"
-    triggerHook: 0
-    offset: menuHeightOffset
-    duration: getSkillsHeight
-  skillsSectionScene.on("enter", enableSkillsSection).addTo(scrollController)
+  # skillsSectionScene = new ScrollScene
+  #   triggerElement: "##{skillsSection.attr("id")}"
+  #   triggerHook: 0
+  #   offset: menuHeightOffset
+  #   duration: getSkillsHeight
+  # skillsSectionScene.on("enter", enableSkillsSection).addTo(scrollController)
 
   contactSectionScene = new ScrollScene
     triggerElement: "##{contactSection.attr("id")}"
