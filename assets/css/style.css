@@ -509,31 +509,20 @@ section#gallery {
     position: relative;
     background-color: #bbbbbb;
     overflow: hidden; }
-    section#gallery .gallery-item img.thumbnail, section#gallery .gallery-item .caption {
+    section#gallery .gallery-item img.thumbnail {
       width: 300px;
-      height: 300px; }
-    section#gallery .gallery-item .caption {
-      position: absolute;
-      top: 300px;
-      padding: 10px;
-      opacity: 0.95;
-      font-size: 0.9em;
-      color: #d5d5d5;
-      background-color: #292929;
-      -webkit-transition: all 0.5s ease-out;
-      -moz-transition: all 0.5s ease-out;
-      -ms-transition: all 0.5s ease-out;
-      -o-transition: all 0.5s ease-out;
-      transition: all 0.5s ease-out;
-      -webkit-transition-delay: 0.1s;
-      transition-delay: 0.1s; }
-      section#gallery .gallery-item .caption .title {
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        color: #ffffff;
-        letter-spacing: 1px; }
-    section#gallery .gallery-item:hover .caption {
-      top: 150px; }
+      height: 300px;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease; }
+    section#gallery .gallery-item:hover img.thumbnail {
+      -webkit-transform: scale(1.25);
+      -moz-transform: scale(1.25);
+      -o-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+      transform: scale(1.25); }
     section#gallery .gallery-item .gallery-item-border {
       position: absolute;
       top: 0;

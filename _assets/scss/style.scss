@@ -619,21 +619,29 @@ section#gallery {
         margin: 2px; position: relative;
         background-color: $color-gallery-frame;
         overflow: hidden;
-        img.thumbnail, .caption { width: 300px; height: 300px; }
-        .caption {
-            position: absolute; top: 300px;
-            padding: 10px; opacity: 0.95;
-            @include caption-style();
-            @include transition(all 0.5s ease-out);
-            @include transition-delay(0.1s);            
+        img.thumbnail {
+            width: 300px; height: 300px;
+            @include transition(all 1s ease);
         }
-        &:hover .caption { top: 150px; }
+        &:hover img.thumbnail {
+            @include transform(scale(1.25));
+        }
+        // .caption {
+        //     width: 300px; height: 300px;
+        //     position: absolute; top: 300px;
+        //     padding: 10px; opacity: 0.95;
+        //     @include caption-style();
+        //     @include transition(all 0.5s ease-out);
+        //     @include transition-delay(0.1s);            
+        // }
+        //&:hover .caption { top: 150px; }
         .gallery-item-border {
             position: absolute; top: 0;
             width: 300px; height: 300px;
             border: 20px solid $color-gallery-thumbnail-frame; opacity: 0.5;
         }
     }
+
     @media (max-width: 340px) {
         >.wrapper >.container { padding: 0; }
         .gallery-item { margin: 2px auto; }
