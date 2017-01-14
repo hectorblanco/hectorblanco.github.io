@@ -5,8 +5,8 @@ task :server, [:port] do |t, args|
   args.with_defaults(:port => "4000")
   pids = [
     spawn("bundle exec jekyll serve --watch --port #{args[:port]}"),
-    spawn("scss --watch _assets/scss:assets/css"),
-    spawn("coffee -b -w -o assets/js -j m.js -c _assets/coffee/main.coffee")
+    spawn("sass --watch _assets/scss:assets/css"),
+    spawn("coffee -w -o assets/js -c _assets/coffee/main.coffee")
   ]
 
   trap "INT" do
@@ -25,6 +25,6 @@ end
 
 desc "Compiles SCSS/COFFEE into assets"
 task :build do
-  sh "sass1.9.1 --update _assets/scss:assets/css"
-  sh "coffee -b -o assets/js -j m.js -c _assets/coffee/main.coffee"
+  sh "sass --update _assets/scss:assets/css"
+  sh "coffee -o assets/js -c _assets/coffee/main.coffee"
 end

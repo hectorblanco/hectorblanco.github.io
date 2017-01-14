@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-ruby "1.9.3"
+ruby "2.4.0"
 
-gem 'jekyll', '= 1.5.1'
-gem 'coffee-script', '~> 2.2.0'
-gem 'sass', '~> 3.3.8'
+gem 'jekyll'
+gem 'coffee-script'
+gem 'sass'
 gem 'rb-fsevent', :require => false
 gem 'rake'
-gem 'github-pages', '~> 19'
-gem 'listen', '~> 1.3'
+gem 'github-pages'
+gem 'listen'
 gem 'wdm'

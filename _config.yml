@@ -1,5 +1,5 @@
 ---
-safe: false # disable custom plugins
+safe: true
 permalink: none
 exclude:
 - build.sh
@@ -11,5 +11,5 @@ exclude:
 title: "Hector Blanco's website"
 description: "Hector Blanco's website"
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 domain: hectorblanco.eu
