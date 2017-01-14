@@ -103,7 +103,7 @@
     captionOff = function() {
       return $("#lightbox-caption").fadeOut("fast");
     };
-    $("#gallery .gallery-item a").imageLightbox({
+    $("#gallery a.gallery-item-link").imageLightbox({
       onStart: function() {
         return overlayOn();
       },

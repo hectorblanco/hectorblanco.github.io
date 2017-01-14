@@ -1,7 +1,7 @@
-<div class="gallery-item all {{ include.filter }}">
-	<a href="/assets/img/gallery/{{ include.src }}" target="_blank">
+<a class="gallery-item-link" href="/assets/img/gallery/{{ include.src }}" target="_blank">
+	<div class="gallery-item all {{ include.filter }}">
 		<img data-original="/assets/img/gallery/mini/{{ include.src }}" width="300" height="300" class="img-lazy thumbnail" alt="{{ include.title }}" data-caption="{{ include.caption }}">
-<!-- 		<div class="caption"><span class="title">{{ include.title }}</span> <span class="body">{{ include.caption }}</span></div> -->
-	</a>
-	<div class="gallery-item-border"></div>
-</div>
+		<!-- <div class="caption"><span class="title">{{ include.title }}</span> <span class="body">{{ include.caption }}</span></div> -->
+		<div class="gallery-item-border"></div>
+	</div>
+</a>

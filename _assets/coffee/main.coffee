@@ -97,7 +97,7 @@ $ ->
     $("#lightbox-caption").fadeOut("fast")
 
   # Show large picture on hovering images  
-  $("#gallery .gallery-item a").imageLightbox
+  $("#gallery a.gallery-item-link").imageLightbox
     onStart:      -> overlayOn()
     onEnd:        ->
       captionOff()
