@@ -33,6 +33,7 @@ $ ->
     self.hide()
     if self.is("img")
       self.attr("src", imgSource)
+      paintFrame(self)
     else
       self.css("background-image", "url('#{imgSource}')")
     self.fadeIn("slow")
@@ -96,7 +97,7 @@ $ ->
   captionOff = ->
     $("#lightbox-caption").fadeOut("fast")
 
-  # Show large picture on hovering images  
+  # Show large picture on click on images  
   $("#gallery a.gallery-item-link").imageLightbox
     onStart:      -> overlayOn()
     onEnd:        ->
@@ -109,6 +110,12 @@ $ ->
     onLoadEnd:    ->
       captionOn()
       activityIndicatorOff()
+
+  # Adapt image frame to defined color
+  paintFrame = (img) ->
+    color = img.data("frame")
+    if color.length > 0
+      img.siblings(".gallery-item-border").css("border-color", color)
 
   # NAV COLLAPSE
 

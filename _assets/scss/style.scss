@@ -30,6 +30,7 @@ $color-menu-gallery-active: rgba(170, 170, 170, 0.7);
 $color-menu-gallery-text: #444444;
 $color-menu-gallery-text-hover: #000000;
 
+$color-gallery-thumbnail-frame: #ABABAB;
 $color-gallery-frame: #bbbbbb;
 $color-gallery-frame-extended: rgba(0, 0, 0, 0.5);
 $color-gallery-frame-shadow: rgba(0, 0, 0, 1);
@@ -630,7 +631,7 @@ section#gallery {
         .gallery-item-border {
             position: absolute; top: 0;
             width: 300px; height: 300px;
-            border: 20px solid rgba(200, 200, 200, 0.3);
+            border: 20px solid $color-gallery-thumbnail-frame; opacity: 0.4;
         }
     }
     @media (max-width: 340px) {
