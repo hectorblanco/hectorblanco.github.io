@@ -298,14 +298,14 @@ $ ->
       $("html,body").animate scrollTop : targetOffset,
         duration: 500
         complete: ->
-          updateUrl targetId
+          #updateUrl targetId
           highlightSection target.attr("id")
 
-  updateUrl = (targetId) ->
-    if window.history and window.history.pushState
-      history.pushState "", document.title, targetId
-    else
-      location.hash = "##{targetId}"
+  # updateUrl = (targetId) ->
+  #   if window.history and window.history.pushState
+  #     history.pushState "", document.title, targetId
+  #   else
+  #     location.hash = "##{targetId}"
 
   $(document).on "click", "*[data-navigate=true]", (e) -> goToUrl($(this).attr("href"), e)
   #goToUrl window.location.pathname
