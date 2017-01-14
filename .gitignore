@@ -2,6 +2,4 @@
 _site/
 node_modules/
 .DS_Store
-assets/css/style.css
-assets/js/m.js
 *.db
