@@ -246,8 +246,7 @@ nav.navbar {
   z-index: 10000;
   -ms-touch-action: none;
   touch-action: none;
-  background-color: #bbbbbb;
-  border: 1px solid #bbbbbb; }
+  background-color: #bbbbbb; }
 
 #lightbox-caption {
   padding: 0.625em;
@@ -509,7 +508,6 @@ section#gallery {
     margin: 2px;
     position: relative;
     background-color: #bbbbbb;
-    border: 1px solid #bbbbbb;
     overflow: hidden; }
     section#gallery .gallery-item img.thumbnail, section#gallery .gallery-item .caption {
       width: 300px;
@@ -542,7 +540,7 @@ section#gallery {
       width: 300px;
       height: 300px;
       border: 20px solid #ABABAB;
-      opacity: 0.4; }
+      opacity: 0.5; }
   @media (max-width: 340px) {
     section#gallery > .wrapper > .container {
       padding: 0; }
