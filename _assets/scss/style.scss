@@ -627,6 +627,11 @@ section#gallery {
             @include transition-delay(0.1s);            
         }
         &:hover .caption { top: 150px; }
+        .gallery-item-border {
+            position: absolute; top: 0;
+            width: 300px; height: 300px;
+            border: 20px solid rgba(200, 200, 200, 0.3);
+        }
     }
     @media (max-width: 340px) {
         >.wrapper >.container { padding: 0; }
