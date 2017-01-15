@@ -8,8 +8,10 @@ exclude:
 - Rakefile
 - debian
 - VERSION
-title: "Hector Blanco's website"
-description: "Hector Blanco's website"
+- CNAME
+- LICENSE
+- README.md
+title: "Hector Blanco"
+description: "Hector Blanco's Portfolio"
 markdown: redcarpet
-highlighter: pygments
 domain: hectorblanco.eu
