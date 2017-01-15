@@ -587,20 +587,16 @@ section#contact {
     section#contact .social ul.social-links li {
       display: inline-block;
       margin: 15px; }
-      section#contact .social ul.social-links li a.icon-link:hover .deviantart {
-        background-color: #4C5C4E;
-        color: #B6D133;
-        border-color: #B6D133; }
+      section#contact .social ul.social-links li a.icon-link:hover .artstation {
+        background-color: #13AEEF;
+        color: #FFFFFF;
+        border-color: #FFFFFF; }
       section#contact .social ul.social-links li a.icon-link:hover .linkedin {
         background-color: #007BB6;
         color: #FFFFFF;
         border-color: #FFFFFF; }
-      section#contact .social ul.social-links li a.icon-link:hover .gplus {
-        background-color: #C94030;
-        color: #FFFFFF;
-        border-color: #FFFFFF; }
-      section#contact .social ul.social-links li a.icon-link:hover .twitter {
-        background-color: #00ABF0;
+      section#contact .social ul.social-links li a.icon-link:hover .facebook {
+        background-color: #3b5998;
         color: #FFFFFF;
         border-color: #FFFFFF; }
       section#contact .social ul.social-links li a.icon-link:hover .github {
