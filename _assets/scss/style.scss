@@ -730,7 +730,7 @@ section#contact {
         @include transition(all ease 0.6s);
         .icon-circle {
             width: 40px; height: 40px; display: inline-block; margin-right: 0.5em;
-            i { line-height: 35px; font-size: 1em; }
+            i { line-height: 35px; font-size: 1.3em; }
         }
         &:hover {  
             .icon-circle { background-color: $color-highlight; color: #FFFFFF; border-color: #FFFFFF; }
