@@ -393,7 +393,8 @@ nav.navbar {
     color: $color-text-light; text-align: center;
     i { line-height: 54px; font-size: 40px; display: inline; }
     &.icon-circle {
-        border: 2px solid $color-text-dark; border-radius: 50%;                 
+        border: 2px solid $color-background-dark;
+        border-radius: 50%;                 
     }
 }
 
@@ -737,7 +738,7 @@ section#contact {
             i { line-height: 35px; font-size: 1.3em; }
         }
         &:hover {  
-            .icon-circle { background-color: $color-highlight; color: #FFFFFF; border-color: #FFFFFF; }
+            .icon-circle { color: $color-highlight; border-color: $color-text-light; }
         }
     }
     .social ul.social-links {
@@ -746,11 +747,12 @@ section#contact {
             display: inline-block; margin: 15px;
             a.icon-link {                                                
                 &:hover {  
-                    .artstation { background-color: #13AEEF; color: #FFFFFF; border-color: #FFFFFF; }
-                    .linkedin { background-color: #007BB6; color: #FFFFFF; border-color: #FFFFFF; }
-                    .facebook { background-color: #3b5998; color: #FFFFFF; border-color: #FFFFFF; }
-                    .github { background-color: #873B7C; color: #FFFFFF; border-color: #FFFFFF; }
-                    .pinterest { background-color: #CC2028; color: #FFFFFF; border-color: #FFFFFF; }
+                    span.icon-circle { border-color: $color-highlight; background-color: $color-background; }
+                    .artstation { background-color: #121d21; color: #13AEEF; border-color: #13AEEF; }
+                    .linkedin { color: #007BB6; border-color: #007BB6; }
+                    .facebook { color: #3b5998; border-color: #3b5998; }
+                    .github { color: #000000; border-color: #000000; }
+                    .pinterest { color: #CC2028; border-color: #CC2028; }
                 }
             }
         }

@@ -238,7 +238,7 @@ nav.navbar {
     font-size: 40px;
     display: inline; }
   .icon-block.icon-circle {
-    border: 2px solid #444444;
+    border: 2px solid #292929;
     border-radius: 50%; }
 
 #imagelightbox {
@@ -581,9 +581,8 @@ section#contact {
         line-height: 35px;
         font-size: 1.3em; }
     section#contact .email a.icon-link:hover .icon-circle {
-      background-color: #cda51c;
-      color: #FFFFFF;
-      border-color: #FFFFFF; }
+      color: #cda51c;
+      border-color: #d5d5d5; }
   section#contact .social ul.social-links {
     padding: 0;
     margin: 0;
@@ -591,26 +590,25 @@ section#contact {
     section#contact .social ul.social-links li {
       display: inline-block;
       margin: 15px; }
+      section#contact .social ul.social-links li a.icon-link:hover span.icon-circle {
+        border-color: #cda51c;
+        background-color: #ffffff; }
       section#contact .social ul.social-links li a.icon-link:hover .artstation {
-        background-color: #13AEEF;
-        color: #FFFFFF;
-        border-color: #FFFFFF; }
+        background-color: #121d21;
+        color: #13AEEF;
+        border-color: #13AEEF; }
       section#contact .social ul.social-links li a.icon-link:hover .linkedin {
-        background-color: #007BB6;
-        color: #FFFFFF;
-        border-color: #FFFFFF; }
+        color: #007BB6;
+        border-color: #007BB6; }
       section#contact .social ul.social-links li a.icon-link:hover .facebook {
-        background-color: #3b5998;
-        color: #FFFFFF;
-        border-color: #FFFFFF; }
+        color: #3b5998;
+        border-color: #3b5998; }
       section#contact .social ul.social-links li a.icon-link:hover .github {
-        background-color: #873B7C;
-        color: #FFFFFF;
-        border-color: #FFFFFF; }
+        color: #000000;
+        border-color: #000000; }
       section#contact .social ul.social-links li a.icon-link:hover .pinterest {
-        background-color: #CC2028;
-        color: #FFFFFF;
-        border-color: #FFFFFF; }
+        color: #CC2028;
+        border-color: #CC2028; }
 
 footer {
   padding: 10px;

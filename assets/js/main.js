@@ -81,11 +81,9 @@
       return $("#lightbox-loading").hide();
     };
     overlayOn = function() {
-      $("#lightbox-overlay").show();
-      return $("body").addClass("noscroll");
+      return $("#lightbox-overlay").show();
     };
     overlayOff = function() {
-      $("body").removeClass("noscroll");
       return $("#lightbox-overlay").fadeOut("fast");
     };
     captionOn = function() {

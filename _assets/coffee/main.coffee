@@ -79,9 +79,9 @@ $ ->
 
   overlayOn = -> 
     $("#lightbox-overlay").show()
-    $("body").addClass("noscroll")
+    # $("body").addClass("noscroll")
   overlayOff = ->
-    $("body").removeClass("noscroll")
+    # $("body").removeClass("noscroll")
     $("#lightbox-overlay").fadeOut("fast")
 
   captionOn = ->
