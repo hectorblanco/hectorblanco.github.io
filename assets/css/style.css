@@ -552,11 +552,26 @@ section#contact {
     section#contact .email p, section#contact .social p {
       padding: 5px; }
     section#contact .email a.icon-link .icon-circle, section#contact .social a.icon-link .icon-circle {
+      position: relative;
       -webkit-transition: all ease 0.6s;
       -moz-transition: all ease 0.6s;
       -ms-transition: all ease 0.6s;
       -o-transition: all ease 0.6s;
       transition: all ease 0.6s; }
+      section#contact .email a.icon-link .icon-circle i, section#contact .social a.icon-link .icon-circle i {
+        position: relative;
+        z-index: 1; }
+        section#contact .email a.icon-link .icon-circle i.icon-blank, section#contact .social a.icon-link .icon-circle i.icon-blank {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          color: #292929;
+          -webkit-transition: all ease 0.6s;
+          -moz-transition: all ease 0.6s;
+          -ms-transition: all ease 0.6s;
+          -o-transition: all ease 0.6s;
+          transition: all ease 0.6s; }
     section#contact .email a.icon-link:hover .icon-circle, section#contact .social a.icon-link:hover .icon-circle {
       -webkit-transform: rotate(360deg);
       -moz-transform: rotate(360deg);
@@ -576,7 +591,8 @@ section#contact {
       width: 40px;
       height: 40px;
       display: inline-block;
-      margin-right: 0.5em; }
+      margin-right: 0.5em;
+      border-color: #444444; }
       section#contact .email a.icon-link .icon-circle i {
         line-height: 35px;
         font-size: 1.3em; }
@@ -590,25 +606,26 @@ section#contact {
     section#contact .social ul.social-links li {
       display: inline-block;
       margin: 15px; }
+      section#contact .social ul.social-links li a.icon-link .artstation i {
+        top: 1px;
+        right: 2px; }
+      section#contact .social ul.social-links li a.icon-link .artstation i.icon-blank {
+        font-size: 36px; }
       section#contact .social ul.social-links li a.icon-link:hover span.icon-circle {
-        border-color: #cda51c;
+        border-color: #000000;
         background-color: #ffffff; }
       section#contact .social ul.social-links li a.icon-link:hover .artstation {
-        background-color: #121d21;
-        color: #13AEEF;
-        border-color: #13AEEF; }
+        color: #121d21; }
+        section#contact .social ul.social-links li a.icon-link:hover .artstation i.icon-blank {
+          color: #13AEEF; }
       section#contact .social ul.social-links li a.icon-link:hover .linkedin {
-        color: #007BB6;
-        border-color: #007BB6; }
+        color: #007BB6; }
       section#contact .social ul.social-links li a.icon-link:hover .facebook {
-        color: #3b5998;
-        border-color: #3b5998; }
+        color: #3b5998; }
       section#contact .social ul.social-links li a.icon-link:hover .github {
-        color: #000000;
-        border-color: #000000; }
+        color: #000000; }
       section#contact .social ul.social-links li a.icon-link:hover .pinterest {
-        color: #CC2028;
-        border-color: #CC2028; }
+        color: #CC2028; }
 
 footer {
   padding: 10px;

@@ -726,7 +726,19 @@ section#contact {
         padding: 30px 0; text-align: center;
         p { padding: 5px; }
         a.icon-link {
-            .icon-circle { @include transition(all ease 0.6s); }
+            .icon-circle {
+                position: relative;
+                @include transition(all ease 0.6s);
+                i { 
+                    position: relative; z-index: 1;
+                    &.icon-blank {                    
+                        position: absolute; top: 0; left: 0;
+                        z-index: 0;
+                        color: $color-background-dark;
+                        @include transition(all ease 0.6s);
+                    }
+                }
+            }
             &:hover .icon-circle { @include transform(rotate(360deg)); }
         }
     }
@@ -735,6 +747,7 @@ section#contact {
         @include transition(all ease 0.6s);
         .icon-circle {
             width: 40px; height: 40px; display: inline-block; margin-right: 0.5em;
+            border-color: $color-text-dark;
             i { line-height: 35px; font-size: 1.3em; }
         }
         &:hover {  
@@ -745,14 +758,21 @@ section#contact {
         padding: 0; margin: 0; list-style: none;
         li {
             display: inline-block; margin: 15px;
-            a.icon-link {                                                
+            a.icon-link {  
+                .artstation {
+                    i { top: 1px; right: 2px; }
+                    i.icon-blank { font-size: 36px; }
+                }
                 &:hover {  
-                    span.icon-circle { border-color: $color-highlight; background-color: $color-background; }
-                    .artstation { background-color: #121d21; color: #13AEEF; border-color: #13AEEF; }
-                    .linkedin { color: #007BB6; border-color: #007BB6; }
-                    .facebook { color: #3b5998; border-color: #3b5998; }
-                    .github { color: #000000; border-color: #000000; }
-                    .pinterest { color: #CC2028; border-color: #CC2028; }
+                    span.icon-circle { border-color: #000000; background-color: $color-background; }
+                    .artstation {
+                        color: #121d21;
+                        i.icon-blank { color: #13AEEF; }
+                     }
+                    .linkedin { color: #007BB6; }
+                    .facebook { color: #3b5998; }
+                    .github { color: #000000; }
+                    .pinterest { color: #CC2028; }
                 }
             }
         }
