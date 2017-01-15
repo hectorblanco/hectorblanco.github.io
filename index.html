@@ -101,18 +101,66 @@ title: Hector Blanco
     <div class="container">
 <!--       <h2><a href="gallery" name="gallery" data-navigate="true"><span>my</span> gallery</a></h2> -->
       <div class="gallery">
-        {% include gallery_item.html frame="#F6E8D0" src="002.jpg" filter="3d" title="Title" caption="Descrption" %}
-        {% include gallery_item.html frame="#d6d8d4" src="001.jpg" filter="3d" title="" caption="" %}
-        {% include gallery_item.html frame="#d1c9c6" src="003.jpg" filter="3d" title="" caption="" %}
-        {% include gallery_item.html frame="#dbc2ea" src="004.jpg" filter="3d" title="" caption="" %}
-        {% include gallery_item.html frame="#FFFFFF" src="006.jpg" filter="3d" title="" caption="" %}
-        {% include gallery_item.html frame="#9be1e8" src="005.jpg" filter="3d" title="" caption="" %}
-        {% include gallery_item.html frame="#8A7B6B" src="007.jpg" filter="2d" title="" caption="" %}
+
+        {% include gallery_item.html
+            frame="#F6E8D0"
+            src="002.jpg"
+            filter="3d"
+            title=""
+            caption="" %}
+
+        {% include gallery_item.html
+            frame="#d6d8d4"
+            src="001.jpg"
+            filter="3d"
+            title=""
+            caption="" %}
+
+        {% include gallery_item.html
+            frame="#d1c9c6"
+            src="003.jpg"
+            filter="3d"
+            title=""
+            caption="" %}
+
+        {% include gallery_item.html
+            frame="#dbc2ea" 
+            src="004.jpg"
+            filter="3d"
+            title=""
+            caption="" %}
+
+        {% include gallery_item.html
+            frame="#FFFFFF"
+            src="006.jpg"
+            filter="3d"
+            title=""
+            caption="" %}
+
+        {% include gallery_item.html
+            frame="#9be1e8"
+            src="005.jpg"
+            filter="3d"
+            title=""
+            caption="" %}
+
+        {% include gallery_item.html
+            frame="#8A7B6B"
+            src="007.jpg"
+            filter="2d"
+            title=""
+            caption="" %}
+
       </div> 
       <div id="lightbox-loading"><div></div></div>
       <div id="lightbox-caption">
         <div><span class="title"></span> <span class="body"></span></div>
-        <div class="fullscreen">Fullscreen</div>
+        <div class="actions">
+          <span><a href="#" title="Download" class="download" download>
+            <i class="icon-download"></i></a></span>
+          <span><a href="#" title="Fullscreen" class="fullscreen">
+            <i class="icon-fullscreen-cross"></i></a></span>
+        </div>
       </div>
       <div id="lightbox-overlay"></div>
     </div>
@@ -164,23 +212,23 @@ title: Hector Blanco
         <p>You can also find me in</p>
         <ul class="social-links">
           <li>
-            <a href="https://www.artstation.com/artist/hectorblanco" title="ArtStation" class="icon-link" target="_blank">
+            <a href="https://www.artstation.com/artist/hectorblanco" title="ArtStation" class="icon-link">
               <span class="icon-block icon-circle artstation"><i class="icon-artstation"></i></span></a>
           </li>
           <li>
-            <a href="http://www.pinterest.com/hector_blanco/" title="Pinterest" class="icon-link" target="_blank">
+            <a href="https://www.pinterest.com/hector_blanco/" title="Pinterest" class="icon-link">
               <span class="icon-block icon-circle pinterest"><i class="icon-pinterest"></i></span></a>
           </li>
           <li>
-            <a href="http://www.linkedin.com/in/hectorblanco/" title="LinkedIn" class="icon-link" target="_blank">
+            <a href="https://www.linkedin.com/in/hectorblanco/" title="LinkedIn" class="icon-link">
               <span class="icon-block icon-block icon-circle linkedin"><i class="icon-linkedin"></i></span></a>
           </li>          
           <li>
-            <a href="http://github.com/hectorblanco/" title="GitHub" class="icon-link" target="_blank">
+            <a href="https://github.com/hectorblanco/" title="GitHub" class="icon-link">
               <span class="icon-block icon-circle github"><i class="icon-github"></i></span></a>
           </li>
           <li>
-            <a href="https://www.facebook.com/hector.blanco.ga" title="Facebook" class="icon-link" target="_blank">
+            <a href="https://www.facebook.com/hector.blanco.ga" title="Facebook" class="icon-link">
               <span class="icon-block icon-circle facebook"><i class="icon-facebook"></i></span></a>
           </li>
         </ul>

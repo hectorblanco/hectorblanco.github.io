@@ -94,12 +94,11 @@
       image = $("a[href='" + selectedImage + "'] img");
       title = image.attr("alt");
       body = image.data("caption");
-      if (title.length > 0 || body.length > 0) {
-        caption = $("#lightbox-caption");
-        caption.find(".title").text(title);
-        caption.find(".body").text(body);
-        return caption.show();
-      }
+      caption = $("#lightbox-caption");
+      caption.find(".title").text(title);
+      caption.find(".body").text(body);
+      caption.find(".fullscreen, .download").attr("href", selectedImage);
+      return caption.show();
     };
     captionOff = function() {
       return $("#lightbox-caption").fadeOut("fast");

@@ -265,6 +265,10 @@ nav.navbar {
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 1px; }
+  #lightbox-caption .actions {
+    margin-top: 6px; }
+    #lightbox-caption .actions span {
+      margin: auto 5px; }
 
 #lightbox-loading {
   width: 2.5em;

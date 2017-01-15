@@ -126,6 +126,10 @@ $color-skill-label: #d5d5d5;
     font-size: 0.9em; color: $color-text-light;
     background-color: $color-gallery-caption;
     .title { @include font-thick(); color: $color-white; letter-spacing: 1px; }
+    .actions {
+        margin-top: 6px;
+        span { margin: auto 5px; }
+    }
 }
 
 @mixin bounce-text() {

@@ -89,11 +89,11 @@ $ ->
     image = $("a[href='#{selectedImage}'] img")
     title = image.attr("alt")
     body = image.data("caption")
-    if title.length > 0 or body.length > 0
-      caption = $("#lightbox-caption")
-      caption.find(".title").text(title)
-      caption.find(".body").text(body)
-      caption.show()
+    caption = $("#lightbox-caption")
+    caption.find(".title").text(title)
+    caption.find(".body").text(body)
+    caption.find(".fullscreen, .download").attr("href", selectedImage)
+    caption.show()
   captionOff = ->
     $("#lightbox-caption").fadeOut("fast")
 
