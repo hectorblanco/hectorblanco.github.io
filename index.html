@@ -102,7 +102,15 @@ title: Hector Blanco
 <!--       <h2><a href="gallery" name="gallery" data-navigate="true"><span>my</span> gallery</a></h2> -->
       <div class="gallery">
 
-        {% include gallery_item.html
+        
+	{% include gallery_item.html
+            frame="#F6E8D0"
+            src="tiki.jpg"
+            filter="3d"
+            title=""
+            caption="" %}
+	      
+	{% include gallery_item.html
             frame="#F6E8D0"
             src="att.jpg"
             filter="3d"
@@ -148,13 +156,6 @@ title: Hector Blanco
 	      {% include gallery_item.html
             frame="#FFFFFF"
             src="006.jpg"
-            filter="3d"
-            title=""
-            caption="" %}
-	
-	      {% include gallery_item.html
-            frame="#F6E8D0"
-            src="002.jpg"
             filter="3d"
             title=""
             caption="" %}
