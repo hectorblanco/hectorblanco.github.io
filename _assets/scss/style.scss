@@ -398,10 +398,14 @@ nav.navbar {
     }
 }
 
-#imagelightbox {
+#imagelightbox, #lightbox-model {
     position: fixed; z-index: 10000; 
     -ms-touch-action: none; touch-action: none;
     background-color: $color-gallery-frame;
+}
+
+#lightbox-model {
+    display:none;
 }
 
 #lightbox-caption {
@@ -410,6 +414,30 @@ nav.navbar {
     position: fixed; left: 0; right: 0; bottom: 0;
     text-align: center;
     @include caption-style();
+}
+
+#lightbox-close {
+    display: none;
+    width: 2em; height: 2em;
+    text-align: left;
+    border: 0;
+    background-color: $color-link; border-radius: 50%;
+    position: fixed;
+    z-index: 10002;
+    top: 2em; right: 2em;
+    @include transition(background-color .3s ease);
+
+    &:hover, &:focus { background-color: lighten($color-link, 20%); }
+    &:before, &:after {
+        width: 2px;
+        background-color: $color-background-dark;
+        content: '';
+        position: absolute;
+        top: 20%; bottom: 20%; left: 50%;
+        margin-left: -1px;
+    }
+    &:before { @include transform(rotate(45deg)); }
+    &:after { @include transform(rotate(-45deg)); }
 }
 
 #lightbox-loading {

@@ -72,6 +72,11 @@ $ ->
     closeNavigations()
     return false
 
+  closeButtonOn = (instance) ->
+    $("#lightbox-close").fadeIn()
+  closeButtonOff = ->
+    $("#lightbox-close").fadeOut("fast")
+
   activityIndicatorOn = ->
     $("#lightbox-loading").show()
   activityIndicatorOff = ->
@@ -84,6 +89,25 @@ $ ->
     # $("body").removeClass("noscroll")
     $("#lightbox-overlay").fadeOut("fast")
 
+  modelOn = ->
+    lightboxImage = $("#imagelightbox")
+    selectedImage = lightboxImage.attr("src")
+    model = $("a[href='#{selectedImage}'] img").data("model")
+    if model
+      lightboxModel = $("#lightbox-model")
+      lightboxModel.attr("style", lightboxImage.attr("style"))
+      activityIndicatorOn()
+      lightboxModel.find("iframe")
+        .attr("src", model)
+        .load -> 
+          lightboxModel.show()
+          lightboxImage.fadeOut("fast")
+          activityIndicatorOff()
+  modelOff = ->
+    lightboxModel = $("#lightbox-model")
+    lightboxModel.removeAttr("style").fadeOut("fast")
+    lightboxModel.find("iframe").removeAttr("src")
+
   captionOn = ->
     selectedImage = $("#imagelightbox").attr("src")
     image = $("a[href='#{selectedImage}'] img")
@@ -93,23 +117,30 @@ $ ->
     caption.find(".title").text(title)
     caption.find(".body").text(body)
     caption.find(".fullscreen, .download").attr("href", selectedImage)
+    caption.find(".fullscreen").attr("target", "_blank")
     caption.show()
   captionOff = ->
     $("#lightbox-caption").fadeOut("fast")
 
   # Show large picture on click on images  
   $("#gallery a.gallery-item-link").imageLightbox
-    onStart:      -> overlayOn()
+    onStart:      ->
+      overlayOn()
+      closeButtonOn(this)
     onEnd:        ->
+      modelOff()
       captionOff()
       overlayOff()
+      closeButtonOff()
       activityIndicatorOff()
     onLoadStart:  ->
+      modelOff()
       captionOff()
       activityIndicatorOn()
     onLoadEnd:    ->
       captionOn()
       activityIndicatorOff()
+      modelOn()
 
   # Adapt image frame to defined color
   paintFrame = (img) ->
