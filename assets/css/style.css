@@ -241,12 +241,15 @@ nav.navbar {
     border: 2px solid #292929;
     border-radius: 50%; }
 
-#imagelightbox {
+#imagelightbox, #lightbox-model {
   position: fixed;
   z-index: 10000;
   -ms-touch-action: none;
   touch-action: none;
   background-color: #bbbbbb; }
+
+#lightbox-model {
+  display: none; }
 
 #lightbox-caption {
   padding: 0.625em;
@@ -269,6 +272,47 @@ nav.navbar {
     margin-top: 6px; }
     #lightbox-caption .actions span {
       margin: auto 5px; }
+
+#lightbox-close {
+  display: none;
+  width: 2em;
+  height: 2em;
+  text-align: left;
+  border: 0;
+  background-color: #cda51c;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 10002;
+  top: 2em;
+  right: 2em;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; }
+  #lightbox-close:hover, #lightbox-close:focus {
+    background-color: #eacc65; }
+  #lightbox-close:before, #lightbox-close:after {
+    width: 2px;
+    background-color: #292929;
+    content: '';
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 50%;
+    margin-left: -1px; }
+  #lightbox-close:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  #lightbox-close:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
 
 #lightbox-loading {
   width: 2.5em;
