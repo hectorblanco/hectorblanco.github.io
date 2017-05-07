@@ -81,11 +81,9 @@
       return $("#lightbox-close").fadeOut("fast");
     };
     activityIndicatorOn = function() {
-      console.log("on");
       return $("#lightbox-loading").show();
     };
     activityIndicatorOff = function() {
-      console.log("off");
       return $("#lightbox-loading").hide();
     };
     overlayOn = function() {
