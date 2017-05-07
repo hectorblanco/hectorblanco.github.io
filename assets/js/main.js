@@ -81,9 +81,11 @@
       return $("#lightbox-close").fadeOut("fast");
     };
     activityIndicatorOn = function() {
+      console.log("on");
       return $("#lightbox-loading").show();
     };
     activityIndicatorOff = function() {
+      console.log("off");
       return $("#lightbox-loading").hide();
     };
     overlayOn = function() {
@@ -102,6 +104,7 @@
         lightboxModel.attr("style", lightboxImage.attr("style"));
         activityIndicatorOn();
         return lightboxModel.find("iframe").attr("src", model).load(function() {
+          $(this).off("load");
           lightboxModel.show();
           lightboxImage.fadeOut("fast");
           return activityIndicatorOff();

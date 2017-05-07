@@ -78,8 +78,10 @@ $ ->
     $("#lightbox-close").fadeOut("fast")
 
   activityIndicatorOn = ->
+    console.log "on"
     $("#lightbox-loading").show()
   activityIndicatorOff = ->
+    console.log "off"
     $("#lightbox-loading").hide()
 
   overlayOn = -> 
@@ -100,6 +102,7 @@ $ ->
       lightboxModel.find("iframe")
         .attr("src", model)
         .load -> 
+          $(this).off("load")
           lightboxModel.show()
           lightboxImage.fadeOut("fast")
           activityIndicatorOff()
