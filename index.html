@@ -89,8 +89,8 @@ title: Hector Blanco
     <div id="navbar-gallery-collapse" class="navbar-collapse collapse">
       <ul class="nav navbar-nav gallery-filter">
         <li class="navbar-item active"><a href="#" data-filter="all">All</a></li>
-        <li class="navbar-item"><a href="#" data-filter="3d">3D Art</a></li>
-        <li class="navbar-item"><a href="#" data-filter="2d">2D Art</a></li>
+        <li class="navbar-item"><a href="#" data-filter="chars">Characters</a></li>
+        <li class="navbar-item"><a href="#" data-filter="props">Props</a></li>
       </ul>
     </div>
   </div>
@@ -103,68 +103,70 @@ title: Hector Blanco
       <div class="gallery">
 
         
-	{% include gallery_item.html
+		{% include gallery_item.html
             frame="#F6E8D0"
             src="tiki.jpg"
-            filter="3d"
+            filter="chars"
             title=""
             caption=""
             model="https://sketchfab.com/models/5ecb08231b7c492fad9ac718c42a9e66/embed" %}
 	      
-	{% include gallery_item.html
+		{% include gallery_item.html
             frame="#F6E8D0"
             src="att.jpg"
-            filter="3d"
+            filter="props"
             title=""
             caption=""
             model="https://sketchfab.com/models/96baee594b764e3ea46836b9f8013554/embed" %}
+			
+		{% include gallery_item.html
+            frame="#FFFFFF"
+            src="dagger.jpg"
+            filter="props"
+            title=""
+            caption=""
+			model="https://www.artstation.com/embed/4871976" %}
+			
+		{% include gallery_item.html
+            frame="#d6d8d4"
+            src="indianchest.jpg"
+            filter="props"
+            title=""
+            caption="" 
+			model="https://sketchfab.com/models/15eb347493374687a45f99797fbe8a0e/embed" %}
 		
-		    {% include gallery_item.html
+		{% include gallery_item.html
             frame="#d1c9c6"
-            src="003.jpg"
-            filter="3d"
+            src="drachen.jpg"
+            filter="chars"
             title=""
             caption="" %}
 			      
         {% include gallery_item.html
             frame="#dbc2ea" 
-            src="004.jpg"
-            filter="3d"
+            src="rabbit.jpg"
+            filter="chars"
             title=""
             caption="" %}
         
 	      {% include gallery_item.html
             frame="#9be1e8"
-            src="005.jpg"
-            filter="3d"
+            src="house.jpg"
+            filter="props"
             title=""
             caption="" %}
 	             
         {% include gallery_item.html
-            frame="#d6d8d4"
-            src="001.jpg"
-            filter="3d"
-            title=""
-            caption="" %}
-
-        {% include gallery_item.html
             frame="#6f686d"
             src="Arr.jpg"
-            filter="3d"
-            title=""
-            caption="" %}
-
-	      {% include gallery_item.html
-            frame="#FFFFFF"
-            src="006.jpg"
-            filter="3d"
+            filter="chars"
             title=""
             caption="" %}
 
         {% include gallery_item.html
             frame="#8A7B6B"
-            src="007.jpg"
-            filter="2d"
+            src="octoballoon.jpg"
+            filter="chars"
             title=""
             caption="" %}
 
