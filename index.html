@@ -102,10 +102,18 @@ title: Hector Blanco
 <!--       <h2><a href="gallery" name="gallery" data-navigate="true"><span>my</span> gallery</a></h2> -->
       <div class="gallery">
 	    
+	     	    	{% include gallery_item.html
+            frame="#F6E8D0"
+            src="templestones.png"
+            filter="props"
+            title=""
+            caption=""
+		    model="https://sketchfab.com/models/6e47b68d13a0413d8fd5fa248a639e8b/embed" %}
+	      
 	    		{% include gallery_item.html
             frame="#F6E8D0"
             src="tipichi.png"
-            filter="props"
+            filter="chars"
             title=""
             caption=""
 		    model="https://sketchfab.com/models/6e47b68d13a0413d8fd5fa248a639e8b/embed" %}
@@ -113,7 +121,7 @@ title: Hector Blanco
 		{% include gallery_item.html
             frame="#d1c9c6"
             src="Dungeon.png"
-            filter="chars"
+            filter="props"
             title=""
             caption="" %}
 	    
